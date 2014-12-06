@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.fau.group5.bugs"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="edu.fau.group5.bugs.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name=".BugsReceiver">
+            <intent-filter>
+                <action android:name="mods.ecoscapes.BUGS_INTENT" />
+                <action android:name="mods.ecoscapes.AFRICAN_FLAT_ROCK_SCORPION_INTENT" />
+                <action android:name="mods.ecoscapes.ASIAN_FOREST_SCORPION_INTENT" />
+                <action android:name="mods.ecoscapes.EMPEROR_SCORPION_INTENT" />
+                <action android:name="mods.ecoscapes.TAILLESS_WHIP_SCORPION_INTENT" />
+                <action android:name="mods.ecoscapes.RED_CLAW_SCORPION_INTENT" />
+                <action android:name="mods.ecoscapes.MADAGASCAR_HISSING_COCKROACH_INTENT" />
+                <action android:name="mods.ecoscapes.MEXICAN_RED_KNEE_TARANTULA_INTENT" />
+                <action android:name="mods.ecoscapes.MEXICAN_BLOND_TARANTULA_INTENT" />
+                <action android:name="mods.ecoscapes.PINK_TOE_TARANTULA_INTENT" />
+                <action android:name="mods.ecoscapes.ROSE_HAIRED_TARANTULA_INTENT" />
+                <action android:name="mods.ecoscapes.FLORIDA_IVORY_MILLIPEDE_INTENT" />
+            </intent-filter>
+        </receiver>        
+        
+    </application>
+
+</manifest>
